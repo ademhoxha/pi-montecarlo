@@ -1,0 +1,11 @@
+<div class="evaluation-container">
+    <div class="estimation-text">Add points to the estimation</div>
+    <input [(ngModel)]="points" type="number" min="1000">
+    <div *ngIf="!loader" class="execution">
+        <a class="button1" (click)="generate()">Execute</a>
+        <div class="execution-error" *ngIf="error">Minimum value should be 1000!</div>
+    </div>
+    <div class="loading-text" *ngIf="loader">Improving estimation...</div>
+
+    <div class="estimated-py">Actual Py value is {{py}}</div>
+</div>
